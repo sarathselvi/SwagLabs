@@ -2,6 +2,7 @@ package com.swaglabs.tests;
 
 import org.testng.annotations.Test;
 
+import com.swaglabs.pages.SauceLabInventoryPage;
 import com.swaglabs.pages.SauceLabLoginPage;
 
 public final class SauceLabLoginPageTests extends BaseTest {
@@ -12,12 +13,11 @@ public final class SauceLabLoginPageTests extends BaseTest {
 
 	@Test
 	public void loginTest() {
-		
-		//Login Test
+
+		// Login Test
 		SauceLabLoginPage loginPageObject = new SauceLabLoginPage();
-		loginPageObject.enterUserName("standard_user");
-		loginPageObject.enterPassword("secret_sauce");
-		loginPageObject.clickLoginButton();
+		SauceLabInventoryPage inventoryPageObject = loginPageObject.enterUserName("standard_user")
+				.enterPassword("secret_sauce").clickLoginButton();
 
 	}
 

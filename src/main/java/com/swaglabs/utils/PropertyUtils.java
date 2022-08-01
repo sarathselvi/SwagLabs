@@ -9,10 +9,11 @@ import java.util.Objects;
 import java.util.Properties;
 
 import com.swaglabs.constants.FrameworkConstants;
+import com.swaglabs.enums.ConfigProperties;
 
-public class ReadPropertyFile {
+public class PropertyUtils {
 
-	private ReadPropertyFile() {
+	private PropertyUtils() {
 
 	}
 
@@ -32,18 +33,18 @@ public class ReadPropertyFile {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-			
+
 		}
 	}
 
-	public static String getValue(String key) throws Exception {
+	public static String getValue(ConfigProperties key) throws Exception {
 
-		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key))) {
+		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
 			throw new Exception("Property name " + key + " is not found. Please check config.properties");
 
 		}
 
-		return CONFIGMAP.get(key);
+		return CONFIGMAP.get(key.name().toLowerCase());
 	}
 
 }

@@ -2,24 +2,28 @@ package com.swaglabs.pages;
 
 import org.openqa.selenium.By;
 
-import com.swaglabs.driver.DriverManager;
+import com.swaglabs.enums.WaitStrategy;
 
-public final class SauceLabLoginPage {
+public final class SauceLabLoginPage extends BasePage {
 
 	private final By textboxUsername = By.id("user-name");
 	private final By textboxPassword = By.id("password");
 	private final By buttonLogin = By.id("login-button");
 
-	public void enterUserName(String username) {
-		DriverManager.getDriver().findElement(textboxUsername).sendKeys(username);
+	public SauceLabLoginPage enterUserName(String username) {
+		sendKeys(textboxUsername, username, WaitStrategy.PRESENCE);
+		return this;
 	}
 
-	public void enterPassword(String password) {
-		DriverManager.getDriver().findElement(textboxPassword).sendKeys(password);
+	public SauceLabLoginPage enterPassword(String password) {
+		sendKeys(textboxPassword, password, WaitStrategy.NONE);
+		return this;
+
 	}
 
-	public void clickLoginButton() {
-		DriverManager.getDriver().findElement(buttonLogin).click();
+	public SauceLabInventoryPage clickLoginButton() {
+		buttonClick(buttonLogin, WaitStrategy.CLICKABLE);
+		return new SauceLabInventoryPage();
 	}
 
 }
