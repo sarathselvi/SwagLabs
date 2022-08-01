@@ -12,7 +12,8 @@ public final class SauceLabLoginPageTests extends BaseTest {
 
 	@Test
 	public void loginTest() {
-
+		
+		//Login Test
 		SauceLabLoginPage loginPageObject = new SauceLabLoginPage();
 		loginPageObject.enterUserName("standard_user");
 		loginPageObject.enterPassword("secret_sauce");
