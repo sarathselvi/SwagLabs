@@ -8,7 +8,7 @@ import com.swaglabs.driver.DriverManager;
 import com.swaglabs.enums.WaitStrategy;
 import com.swaglabs.factories.ExplicitWaitFactory;
 import com.swaglabs.reports.ExtentReport;
-import com.swaglabs.utils.TestUtils;
+import com.swaglabs.utils.ScreenShotUtil;
 
 public class BasePage {
 
@@ -16,7 +16,7 @@ public class BasePage {
 		WebElement element = ExplicitWaitFactory.performExplicitWait(waitStrategy, by);
 		element.click();
 		ExtentReport.test.pass(elementname + " is Clicked",
-				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtil.getBase64Image()).build());
 
 	}
 
@@ -25,7 +25,7 @@ public class BasePage {
 
 		element.sendKeys(value);
 		ExtentReport.test.pass(value + " is entered successfully in " + elementname,
-				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtil.getBase64Image()).build());
 
 	}
 

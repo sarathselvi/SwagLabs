@@ -8,7 +8,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.swaglabs.driver.Driver;
+import com.swaglabs.enums.ConfigProperties;
 import com.swaglabs.reports.ExtentReport;
+import com.swaglabs.utils.PropertyUtils;
 
 public class BaseTest {
 
@@ -30,7 +32,7 @@ public class BaseTest {
 
 	@BeforeMethod
 	protected void setUp() throws Exception {
-		Driver.initDriver();
+		Driver.initDriver(PropertyUtils.getValue(ConfigProperties.BROWSER));
 
 	}
 

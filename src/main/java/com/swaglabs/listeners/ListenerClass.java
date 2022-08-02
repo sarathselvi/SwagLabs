@@ -9,7 +9,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.swaglabs.driver.DriverManager;
 import com.swaglabs.reports.ExtentReport;
-import com.swaglabs.utils.TestUtils;
+import com.swaglabs.utils.ScreenShotUtil;
 
 public class ListenerClass implements ITestListener {
 
@@ -24,21 +24,21 @@ public class ListenerClass implements ITestListener {
 
 		
 		ExtentReport.test.pass(result.getMethod().getMethodName() + " is passed",
-				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtil.getBase64Image()).build());
 
 	}
 
 	public void onTestFailure(ITestResult result) {
 		
 		ExtentReport.test.fail(result.getMethod().getMethodName() + " is failed",
-				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtil.getBase64Image()).build());
 	}
 
 	public void onTestSkipped(ITestResult result) {
 
 
 		ExtentReport.test.skip(result.getMethod().getMethodName() + " is skipped",
-				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
+				MediaEntityBuilder.createScreenCaptureFromBase64String(ScreenShotUtil.getBase64Image()).build());
 
 	}
 

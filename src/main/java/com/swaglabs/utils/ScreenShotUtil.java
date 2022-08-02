@@ -5,9 +5,9 @@ import org.openqa.selenium.TakesScreenshot;
 
 import com.swaglabs.driver.DriverManager;
 
-public class TestUtils {
+public class ScreenShotUtil {
 
-	private TestUtils() {
+	private ScreenShotUtil() {
 	}
 
 	public static String getBase64Image() {
