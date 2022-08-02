@@ -5,8 +5,10 @@
     <classes>
       <class name="com.swaglabs.tests.SauceLabLoginPageTests">
         <methods>
+          <include name="afterSuite"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="beforeSuite"/>
           <include name="loginTest"/>
         </methods>
       </class> <!-- com.swaglabs.tests.SauceLabLoginPageTests -->

@@ -1,8 +1,7 @@
 package com.swaglabs.enums;
 
 public enum ConfigProperties {
-	
-	URL,
-	BROWSER;
+
+	URL, BROWSER, USERNAME, PASSWORD, PRODUCT;
 
 }

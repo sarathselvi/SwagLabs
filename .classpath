@@ -34,5 +34,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Guru99HybridFramework/POI/poi-ooxml-3.8-20120326.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
