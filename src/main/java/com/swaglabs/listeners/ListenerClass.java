@@ -1,12 +1,19 @@
 package com.swaglabs.listeners;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.swaglabs.driver.DriverManager;
 import com.swaglabs.reports.ExtentReport;
+import com.swaglabs.utils.TestUtils;
 
 public class ListenerClass implements ITestListener {
+
+
 
 	public void onTestStart(ITestResult result) {
 		ExtentReport.createTest(result.getMethod().getMethodName());
@@ -15,17 +22,23 @@ public class ListenerClass implements ITestListener {
 
 	public void onTestSuccess(ITestResult result) {
 
-		ExtentReport.test.pass(result.getMethod().getMethodName() + " is passed");
+		
+		ExtentReport.test.pass(result.getMethod().getMethodName() + " is passed",
+				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
 
 	}
 
 	public void onTestFailure(ITestResult result) {
-		ExtentReport.test.pass(result.getMethod().getMethodName() + " is failed");
+		
+		ExtentReport.test.fail(result.getMethod().getMethodName() + " is failed",
+				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
 	}
 
 	public void onTestSkipped(ITestResult result) {
 
-		ExtentReport.test.skip(result.getMethod().getMethodName() + " is skipped");
+
+		ExtentReport.test.skip(result.getMethod().getMethodName() + " is skipped",
+				MediaEntityBuilder.createScreenCaptureFromBase64String(TestUtils.getBase64Image()).build());
 
 	}
 

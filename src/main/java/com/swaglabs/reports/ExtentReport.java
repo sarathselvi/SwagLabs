@@ -9,6 +9,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.swaglabs.constants.FrameworkConstants;
 
 public final class ExtentReport {
 
@@ -22,7 +23,7 @@ public final class ExtentReport {
 	public static void initReports() {
 		if (Objects.isNull(extent)) {
 			extent = new ExtentReports();
-			ExtentSparkReporter spark = new ExtentSparkReporter("index.html");
+			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentreportpath());
 			extent.attachReporter(spark);
 			spark.config().setTheme(Theme.STANDARD);
 			spark.config().setDocumentTitle("Swag Labs");

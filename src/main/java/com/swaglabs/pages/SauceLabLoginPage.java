@@ -3,7 +3,6 @@ package com.swaglabs.pages;
 import org.openqa.selenium.By;
 
 import com.swaglabs.enums.WaitStrategy;
-import com.swaglabs.reports.ExtentReport;
 
 public final class SauceLabLoginPage extends BasePage {
 

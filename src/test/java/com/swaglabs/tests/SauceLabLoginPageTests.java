@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import com.swaglabs.enums.ConfigProperties;
 import com.swaglabs.pages.SauceLabInventoryPage;
 import com.swaglabs.pages.SauceLabLoginPage;
-import com.swaglabs.reports.ExtentReport;
 import com.swaglabs.utils.PropertyUtils;
 
 public final class SauceLabLoginPageTests extends BaseTest {
