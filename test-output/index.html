@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.swaglabs.tests.SauceLabLoginPageTests" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.swaglabs.tests.SauceLabCheckoutCompletePageTests" class="method navigator-link" hash-for-method="validateOrderSuccessMessage">validateOrderSuccessMessage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -120,17 +120,19 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.swaglabs.tests.SauceLabLoginPageTests</span>
+              <span class="class-name">com.swaglabs.tests.SauceLabCheckoutCompletePageTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest">
-                  </a> <!-- loginTest -->
-                  <span class="method-name">loginTest</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Swag Las] but found [Swag Labs]
-	at com.swaglabs.tests.SauceLabLoginPageTests.loginTest(SauceLabLoginPageTests.java:28)
-... Removed 31 stack frames
+                  <a name="validateOrderSuccessMessage">
+                  </a> <!-- validateOrderSuccessMessage -->
+                  <span class="method-name">validateOrderSuccessMessage</span>
+                  <div class="stack-trace">java.lang.AssertionError: 
+expected: &quot;THANK YOU FOR YOUR ORDE&quot;
+ but was: &quot;THANK YOU FOR YOUR ORDER&quot;
+	at com.swaglabs.tests.SauceLabCheckoutCompletePageTests.validateOrderSuccessMessage(SauceLabCheckoutCompletePageTests.java:33)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -151,7 +153,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.swaglabs.tests.SauceLabLoginPageTests&quot;/&gt;
+      &lt;class name=&quot;com.swaglabs.tests.SauceLabCheckoutCompletePageTests&quot;/&gt;
       &lt;class name=&quot;com.swaglabs.tests.BaseTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -194,14 +196,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginTest')
-data.setCell(0, 2, 'com.swaglabs.tests.SauceLabLoginPageTests')
-data.setCell(0, 3, 787);
+data.setCell(0, 1, 'validateOrderSuccessMessage')
+data.setCell(0, 2, 'com.swaglabs.tests.SauceLabCheckoutCompletePageTests')
+data.setCell(0, 3, 28779);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 787 ms</span>
+              <span class="suite-total-time">Total running time: 28 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -236,28 +238,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.swaglabs.tests.SauceLabLoginPageTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.swaglabs.tests.SauceLabCheckoutCompletePageTests</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">216 ms</span>
+                <span class="method-start">213 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">loginTest</span>
-                <span class="method-start">3506 ms</span>
+                <span class="method-name">validateOrderSuccessMessage</span>
+                <span class="method-start">4118 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">4451 ms</span>
+                <span class="method-start">35025 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">4475 ms</span>
+                <span class="method-start">35048 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

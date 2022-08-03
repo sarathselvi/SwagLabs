@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.swaglabs.tests.SauceLabLoginPageTests">
+      <class name="com.swaglabs.tests.SauceLabCheckoutCompletePageTests">
         <methods>
           <include name="afterSuite"/>
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeSuite"/>
-          <include name="loginTest"/>
+          <include name="validateOrderSuccessMessage"/>
         </methods>
-      </class> <!-- com.swaglabs.tests.SauceLabLoginPageTests -->
+      </class> <!-- com.swaglabs.tests.SauceLabCheckoutCompletePageTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
