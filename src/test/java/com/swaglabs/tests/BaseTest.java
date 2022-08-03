@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import com.swaglabs.driver.Driver;
-import com.swaglabs.driver.DriverManager;
 import com.swaglabs.enums.ConfigProperties;
 import com.swaglabs.pages.BasePage;
 import com.swaglabs.reports.ExtentReport;
@@ -41,7 +40,7 @@ public class BaseTest extends BasePage {
 
 	@AfterMethod
 	protected void tearDown() {
-		// Driver.quitDriver();
+		Driver.quitDriver();
 	}
 
 }

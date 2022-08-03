@@ -14,10 +14,9 @@ public class FrameworkConstants {
 	private static final String CONFIGFILEPATH = RESOURCEPATH + "/Configuration/config.properties";
 	private static final String EXTENTREPORTPATH = System.getProperty("user.dir")
 			+ "/extent-test-output/swagLabsExtentReport.html";
-	
+	private static final String TESTDATASHEETPATH = RESOURCEPATH + "/TestData/SwagLabsTestData.xlsx";
 
 	private static final int EXPLICITWAIT = 10;
-	private static final String TESTDATA_SHEET_PATH = RESOURCEPATH + "";
 
 	public static String getChromedriverpath() {
 		return CHROMEDRIVERPATH;
@@ -29,10 +28,6 @@ public class FrameworkConstants {
 
 	public static int getExplicitwait() {
 		return EXPLICITWAIT;
-	}
-
-	public static String getTestdataSheetPath() {
-		return TESTDATA_SHEET_PATH;
 	}
 
 	public static String getExtentreportpath() {
@@ -50,6 +45,10 @@ public class FrameworkConstants {
 
 	public static String getIedriverpath() {
 		return IEDRIVERPATH;
+	}
+
+	public static String getTestdatasheetpath() {
+		return TESTDATASHEETPATH;
 	}
 
 }
