@@ -1,19 +1,11 @@
 package com.swaglabs.listeners;
 
-import java.util.Set;
-
-import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.testng.IClass;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
-import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.swaglabs.driver.DriverManager;
 import com.swaglabs.reports.ExtentReport;
 import com.swaglabs.utils.ScreenShotUtil;
 

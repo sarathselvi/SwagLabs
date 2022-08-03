@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import com.swaglabs.constants.FrameworkConstants;
 import com.swaglabs.enums.ConfigProperties;
+import com.swaglabs.exceptions.PropertyFileUsageException;
 
 public class PropertyUtils {
 
@@ -30,17 +31,18 @@ public class PropertyUtils {
 			}
 
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			throw new PropertyFileUsageException("Property File not found. Please check");
 		} catch (IOException e) {
-			e.printStackTrace();
+			throw new PropertyFileUsageException("Please Check Property File");
 
 		}
 	}
 
-	public static String getValue(ConfigProperties key) throws Exception {
+	public static String getValue(ConfigProperties key) {
 
 		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
-			throw new Exception("Property name " + key + " is not found. Please check config.properties");
+			throw new PropertyFileUsageException(
+					"Property name " + key + " is not found. Please check config.properties");
 
 		}
 

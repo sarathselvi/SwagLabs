@@ -12,7 +12,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="beforeSuite"/>
-          <include name="validateOrderSuccessMessage"/>
+          <include name="validateOrderSuccessMessage" invocation-numbers="1"/>
         </methods>
       </class> <!-- com.swaglabs.tests.SauceLabCheckoutCompletePageTests -->
     </classes>

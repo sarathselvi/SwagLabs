@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.swaglabs.tests.SauceLabInventoryPageTests">
+      <class name="com.swaglabs.tests.SauceLabCartPageTests">
         <methods>
-          <include name="afterSuite"/>
-          <include name="setUp"/>
-          <include name="addItemToCartTest"/>
-          <include name="tearDown"/>
-          <include name="beforeSuite"/>
+          <include name="validateOrderSuccessMessage" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.swaglabs.tests.SauceLabInventoryPageTests -->
+      </class> <!-- com.swaglabs.tests.SauceLabCartPageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

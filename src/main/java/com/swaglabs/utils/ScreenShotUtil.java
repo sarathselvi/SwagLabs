@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import com.swaglabs.driver.DriverManager;
+import com.swaglabs.exceptions.FrameworkException;
 
 public class ScreenShotUtil {
 
@@ -17,9 +18,9 @@ public class ScreenShotUtil {
 
 			return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			throw new FrameworkException("Exception in  ScreenshotUtil Class");
 
-			e.printStackTrace();
-			return "NoScreenShot";
 		}
 	}
 }

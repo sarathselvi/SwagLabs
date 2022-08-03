@@ -31,7 +31,7 @@ public final class ExtentReport {
 		}
 	}
 
-	public static void flushReports() throws IOException {
+	public static void flushReports() throws IOException  {
 		extent.flush();
 		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentreportpath()).toURI());
 

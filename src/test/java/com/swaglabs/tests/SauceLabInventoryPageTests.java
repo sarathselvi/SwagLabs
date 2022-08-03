@@ -1,10 +1,8 @@
 package com.swaglabs.tests;
 
 import org.assertj.core.api.Assertions;
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.swaglabs.driver.DriverManager;
 import com.swaglabs.enums.ConfigProperties;
 import com.swaglabs.pages.SauceLabInventoryPage;
 import com.swaglabs.pages.SauceLabLoginPage;
