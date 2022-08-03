@@ -33,12 +33,14 @@ public final class ExtentReport {
 
 	public static void flushReports() throws IOException {
 		extent.flush();
-		Desktop.getDesktop().browse(new File("index.html").toURI());
+		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentreportpath()).toURI());
 
 	}
 
 	public static void createTest(String testcasename) {
 
 		test = extent.createTest(testcasename);
+		
+
 	}
 }

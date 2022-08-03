@@ -20,8 +20,8 @@ public class BasePage {
 
 	}
 
-	protected void sendKeys(By by, String value, WaitStrategy waitStrategy, String elementname) {
-		WebElement element = ExplicitWaitFactory.performExplicitWait(waitStrategy, by);
+	protected void sendKeys(By textboxUsername, String value, WaitStrategy waitStrategy, String elementname) {
+		WebElement element = ExplicitWaitFactory.performExplicitWait(waitStrategy, textboxUsername);
 
 		element.sendKeys(value);
 		ExtentReport.test.pass(value + " is entered successfully in " + elementname,

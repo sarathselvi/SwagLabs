@@ -1,7 +1,11 @@
 package com.swaglabs.pages;
 
-public class SauceLabInventoryPage {
-	
-	
+public class SauceLabInventoryPage extends BasePage {
+
+	public String getInventoryPageTitle() {
+
+		return getPageTitle();
+
+	}
 
 }
