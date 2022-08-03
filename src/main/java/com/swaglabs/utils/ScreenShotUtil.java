@@ -12,7 +12,14 @@ public class ScreenShotUtil {
 
 	public static String getBase64Image() {
 
-		return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
+		try {
+			Thread.sleep(2000);
 
+			return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
+		} catch (InterruptedException e) {
+
+			e.printStackTrace();
+			return "NoScreenShot";
+		}
 	}
 }

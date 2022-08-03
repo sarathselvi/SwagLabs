@@ -1,33 +1,29 @@
 package com.swaglabs.tests;
 
 import org.assertj.core.api.Assertions;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import com.swaglabs.driver.DriverManager;
 import com.swaglabs.enums.ConfigProperties;
 import com.swaglabs.pages.SauceLabInventoryPage;
 import com.swaglabs.pages.SauceLabLoginPage;
 import com.swaglabs.utils.PropertyUtils;
 
-public final class SauceLabLoginPageTests extends BaseTest {
+public class SauceLabInventoryPageTests extends BaseTest {
 
-	private SauceLabLoginPageTests() {
+	private SauceLabInventoryPageTests() {
 
 	}
 
 	@Test
-	public void loginTest() throws Exception {
-
-		// Login Test
+	public void addItemToCartTest() throws Exception {
 		SauceLabLoginPage loginPageObject = new SauceLabLoginPage();
 
 		SauceLabInventoryPage inventoryPageObject = loginPageObject
 				.enterUserName(PropertyUtils.getValue(ConfigProperties.USERNAME))
-				.enterPassword(PropertyUtils.getValue(ConfigProperties.PASSWORD)).clickLoginButton();
-
-		Assertions.assertThat(inventoryPageObject.getInventoryPageTitle()).isEqualTo("Swag Labs");
-		Assertions.assertThat(inventoryPageObject.getInventoryPageURL())
-				.isEqualTo("https://www.saucedemo.com/inventory.html");
-		
+				.enterPassword(PropertyUtils.getValue(ConfigProperties.PASSWORD)).clickLoginButton().addProductToCart();
+		Assertions.assertThat(inventoryPageObject.getCartValue()).isEqualTo("1");
 
 	}
 

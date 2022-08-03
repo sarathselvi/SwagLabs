@@ -9,8 +9,6 @@ public final class SauceLabLoginPage extends BasePage {
 	private final By textboxUsername = By.id("user-name");
 	private final By textboxPassword = By.id("password");
 	private final By buttonLogin = By.id("login-button");
-	
-
 
 	public SauceLabLoginPage enterUserName(String username) {
 		sendKeys(textboxUsername, username, WaitStrategy.PRESENCE, "UserName");
@@ -26,7 +24,7 @@ public final class SauceLabLoginPage extends BasePage {
 	}
 
 	public SauceLabInventoryPage clickLoginButton() {
-		buttonClick(buttonLogin, WaitStrategy.CLICKABLE, "Login Button");
+		buttonClick(buttonLogin, WaitStrategy.PRESENCE, "Login Button");
 
 		return new SauceLabInventoryPage();
 	}
