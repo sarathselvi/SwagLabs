@@ -14,7 +14,7 @@ public class FrameworkConstants {
 	private static final String CONFIGFILEPATH = RESOURCEPATH + "/Configuration/config.properties";
 	private static final String EXTENTREPORTPATH = System.getProperty("user.dir")
 			+ "/extent-test-output/swagLabsExtentReport.html";
-	private static final String TESTDATASHEETPATH = RESOURCEPATH + "/TestData/SwagLabsTestDat.xlsx";
+	private static final String TESTDATASHEETPATH = RESOURCEPATH + "/TestData/SwagLabsTestData.xlsx";
 
 	private static final int EXPLICITWAIT = 10;
 

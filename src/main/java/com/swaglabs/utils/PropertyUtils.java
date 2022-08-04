@@ -30,10 +30,9 @@ public class PropertyUtils {
 				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim());
 			}
 
-		} catch (FileNotFoundException e) {
-			throw new PropertyFileUsageException("Property File not found. Please check");
 		} catch (IOException e) {
-			throw new PropertyFileUsageException("Please Check Property File");
+			e.printStackTrace();
+			System.exit(0);
 
 		}
 	}

@@ -29,18 +29,23 @@ public final class ExtentReport {
 			spark.config().setDocumentTitle("Swag Labs");
 			spark.config().setReportName("Saucedemo Website");
 		}
+
 	}
 
-	public static void flushReports() throws IOException  {
+	public static void flushReports() throws IOException {
 		extent.flush();
-		Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentreportpath()).toURI());
+		try {
+			Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentreportpath()).toURI());
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
 
 	}
 
 	public static void createTest(String testcasename) {
 
 		test = extent.createTest(testcasename);
-		
 
 	}
 }

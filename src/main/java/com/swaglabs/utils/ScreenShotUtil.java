@@ -18,7 +18,7 @@ public class ScreenShotUtil {
 
 			return ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BASE64);
 		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
+			//Thread.currentThread().interrupt();
 			throw new FrameworkException("Exception in  ScreenshotUtil Class");
 
 		}

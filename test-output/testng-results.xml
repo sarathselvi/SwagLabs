@@ -2,20 +2,20 @@
 <testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-03T15:22:11Z" name="Suite" finished-at="2022-08-03T15:23:21Z" duration-ms="69599">
+  <suite started-at="2022-08-04T05:35:11Z" name="Suite" finished-at="2022-08-04T05:36:22Z" duration-ms="71470">
     <groups>
     </groups>
-    <test started-at="2022-08-03T15:22:11Z" name="Test" finished-at="2022-08-03T15:23:21Z" duration-ms="69599">
+    <test started-at="2022-08-04T05:35:11Z" name="Test" finished-at="2022-08-04T05:36:22Z" duration-ms="71470">
       <class name="com.swaglabs.tests.SauceLabCheckoutCompletePageTests">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:22:11Z" name="beforeSuite" finished-at="2022-08-03T15:22:11Z" duration-ms="203" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:35:11Z" name="beforeSuite" finished-at="2022-08-04T05:35:11Z" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:22:12Z" name="setUp" finished-at="2022-08-03T15:22:15Z" duration-ms="3588" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:35:11Z" name="setUp" finished-at="2022-08-04T05:35:15Z" duration-ms="3738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateOrderSuccessMessage(java.util.Map)[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:22:15Z" name="validateOrderSuccessMessage" data-provider="customerData" finished-at="2022-08-03T15:22:44Z" duration-ms="28753" status="PASS">
+        <test-method signature="validateOrderSuccessMessage(java.util.Map)[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:35:15Z" name="validateOrderSuccessMessage" data-provider="customerData" finished-at="2022-08-04T05:35:44Z" duration-ms="29094" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,15 +26,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateOrderSuccessMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:22:46Z" name="tearDown" finished-at="2022-08-03T15:22:47Z" duration-ms="673" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:35:46Z" name="tearDown" finished-at="2022-08-04T05:35:47Z" duration-ms="675" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:22:47Z" name="setUp" finished-at="2022-08-03T15:22:50Z" duration-ms="2726" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:35:47Z" name="setUp" finished-at="2022-08-04T05:35:51Z" duration-ms="3988" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validateOrderSuccessMessage(java.util.Map)[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:22:50Z" name="validateOrderSuccessMessage" data-provider="customerData" finished-at="2022-08-03T15:23:18Z" duration-ms="28567" status="PASS">
+        <test-method signature="validateOrderSuccessMessage(java.util.Map)[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:35:51Z" name="validateOrderSuccessMessage" data-provider="customerData" finished-at="2022-08-04T05:36:20Z" duration-ms="28750" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,11 +45,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateOrderSuccessMessage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:23:20Z" name="tearDown" finished-at="2022-08-03T15:23:21Z" duration-ms="689" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:36:22Z" name="tearDown" finished-at="2022-08-04T05:36:22Z" duration-ms="639" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@727eb8cb]" started-at="2022-08-03T15:23:21Z" name="afterSuite" finished-at="2022-08-03T15:23:22Z" duration-ms="708" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.swaglabs.tests.SauceLabCheckoutCompletePageTests@5a9f4771]" started-at="2022-08-04T05:36:22Z" name="afterSuite" finished-at="2022-08-04T05:36:23Z" duration-ms="655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

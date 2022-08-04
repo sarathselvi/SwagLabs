@@ -8,45 +8,47 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-import com.swaglabs.constants.FrameworkConstants;
 import com.swaglabs.enums.ConfigProperties;
 import com.swaglabs.utils.PropertyUtils;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public final class Driver {
+
 	private Driver() {
 
 	}
 
-	public static void initDriver(String browser)  {
+	public static void initDriver(String browser) {
 
 		if (Objects.isNull(DriverManager.getDriver())) {
 
 			if (browser.equalsIgnoreCase("chrome")) {
+				WebDriverManager.chromedriver().setup();
 
-				System.setProperty("webdriver.chrome.driver", FrameworkConstants.getChromedriverpath());
 				DriverManager.setDriver(new ChromeDriver());
-				DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
+
 			} else if (browser.equalsIgnoreCase("firefox")) {
-				System.setProperty("webdriver.gecko.driver", FrameworkConstants.getFirefoxdriverpath());
+
+				WebDriverManager.firefoxdriver().setup();
 				DriverManager.setDriver(new FirefoxDriver());
-				DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 
 			} else if (browser.equalsIgnoreCase("edge")) {
-				System.setProperty("webdriver.edge.driver", FrameworkConstants.getMsedgedriverpath());
+				WebDriverManager.edgedriver();
 				DriverManager.setDriver(new EdgeDriver());
-				DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 
 			} else if (browser.equalsIgnoreCase("internetexplorer")) {
-				System.setProperty("webdriver.ie.driver", FrameworkConstants.getIedriverpath());
+				WebDriverManager.iedriver().setup();
 				DriverManager.setDriver(new InternetExplorerDriver());
-				DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 
 			} else if (browser.equalsIgnoreCase("safari")) {
+				WebDriverManager.safaridriver().setup();
 
 				DriverManager.setDriver(new SafariDriver());
-				DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
+
 			}
 		}
+		DriverManager.getDriver().get(PropertyUtils.getValue(ConfigProperties.URL));
 
 	}
 
