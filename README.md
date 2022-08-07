@@ -21,5 +21,18 @@ The following process will help in setting up the project.
 		(b) URL for SauceDemo Website based on the environment
 		(c) UserID and Password
 
+# Execution
+1. Once the project is setup in Eclipse, right click on the project and click "Run As" and Select "Maven Test"
+2. This will executre the classes configured in testng.xml
+3. In order to run specific set of tests, create new testng.xml and change the properties of maven-surefire-plugin 
+   from  "\<suiteXmlFile\>testng.xml\</suiteXmlFile\>" to the new suite file name
 
+# Reports
+1. Extent Report is used to document all the test execution.
+2. Report will be automatically opened once the execution is completed.
+3. We can also find the reports under user.dir/extent-test-output/
+
+
+ 
+	
 
